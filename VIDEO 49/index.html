@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit & Position - KernalPrab</title>
+    <style>
+        .container{
+            height: 544px;
+            width: 644px;
+            background-image: url(img.png);
+            background-position: top right;
+            background-repeat: no-repeat;
+            border: 2px solid black;
+        }
+        img{
+            height: 344px;
+            width: 244px;
+            /* object-fit: contain; */
+            object-fit: cover;
+            object-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img2.png">
+    </div>
+</body>
+</html>

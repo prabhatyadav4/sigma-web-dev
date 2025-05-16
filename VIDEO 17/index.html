@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors - KernalPrab</title>
+    <style>
+        /* Element Selector */
+        div{
+            background-color: yellow;
+            color: red;
+        }
+
+        /* Class Selector */
+        .red{
+            background-color: blue;
+            color: red;
+        }
+
+        /* ID Selector */
+        #yellow{
+            background-color: green;
+            color: red;
+        }
+
+        /* Child Selector */
+        /* div>p{
+            background-color: aqua;
+            color: red;
+        } */
+
+        /* Descendent Selector */
+        div p{
+            background-color: aqua;
+            color: red;
+        }
+
+        /* Universal Selector */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color: yellow;
+        }
+
+        a:link{
+            color: green;
+        }
+
+        a:active{
+            background-color: brown;
+        }
+        a:hover{
+            background-color: blue;
+        }
+        p:first-child{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>I am KernalPrab</div>
+    <div class="red">I am a student.</div>
+    <div id="yellow">I am a developer</div>
+    <div>
+        <article>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ea?</p>
+        </article>
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+    <main class="one">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquam ab ullam quibusdam nesciunt quia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aperiam eum porro facilis praesentium dolor?</p>
+    </main>
+   
+</body>
+</html>

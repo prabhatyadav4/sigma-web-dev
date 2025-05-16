@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables - KernalPrab</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --color:blue;
+            --seccolor: aqua;
+            --defpad: 20px;
+            --defop: 0.3;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding: var(--defpad);
+        }
+        ul li:first-child{
+            opacity: var(--defop);
+            --color:rgb(74, 74, 197);
+            background-color: var(--color, red);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quas est quae, impedit natus ratione sit quidem animi temporibus officia vel? Illo vero nostrum id dolores maxime atque vitae minima possimus nesciunt minus consectetur, voluptate animi debitis dicta dolor ex sapiente architecto eveniet culpa qui.
+    </div>
+</body>
+</html>

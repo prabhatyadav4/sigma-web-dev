@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms MasterClass - KernalPrab</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0;
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: gold;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            /* transform: rotate(40deg);    */
+            /* transform: rotate(0.50turn); */
+            /* transform: rotateX(45deg); */
+            /* transform: rotateY(45deg); */
+            /* transform: rotateZ(45deg); */
+            /* transform: scale(1.5); */
+            /* transform: skew(5deg); */
+            /* transform: skewY(5deg); */
+            /* transform: translate(54%); */
+            /* transform: translateY(55%); */
+            transform: rotateX(30deg) skew(10deg) translateY(45%);
+            
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> box </div>
+    </div>
+</body>
+</html>

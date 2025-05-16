@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORMS - KernalPrab</title>
+    </head>
+    <body>
+        <h2>Form to apply SIGMA ID Card</h2>
+        <form action="post">
+            <div>
+                <label for="username">Enter your username: </label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required autofocus>
+            </div>
+            <div>
+                <input type="radio" id=male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="subscribe">Subscribe our Newsletter</label>
+            </div>
+            <div>
+                <label for="comment">Enter your comment</label>
+                <textarea id="comment" name="comment" rows="4"  cols="50">Comment...</textarea>
+            </div>
+            <div>
+                <select name="fruit">
+                    <option value="apple">Apple</option>
+                    <option value="mango">Mango</option>
+                    <option value="litchi">Litchi</option>
+                </select>
+            </div>     
+        </form>
+
+    </body>
+</html>

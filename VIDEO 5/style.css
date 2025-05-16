@@ -1,0 +1,12 @@
+table{
+    border: 2px solid black;
+}
+td{
+    border: 1px solid black;
+}
+h2{
+    color: darkred;
+}
+h3{
+    color: darkblue;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property - KernalPrab</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .box{
+            border: 2px solid black;
+            height: 50px;
+            width: 80vw;
+            margin: 1px;
+        }
+        .box1{
+            background-color: rgb(255,103,31 );
+            /* position: static; */
+            /* position: sticky;
+            top: 5px;
+            left: 10px; */
+            
+        }
+        .box2{
+            background-color: white;
+            /* position: relative; */
+            /* top: 5px;
+            left: 10px; */
+          
+        }
+        .box3{
+            background-color: #138808 ;
+            /* position: absolute;
+            top: 0px; */
+            /* position: fixed;
+            left: 10px;
+            top: 100px; */
+            
+        }
+        .parent{
+            border: 3px solid blue;
+            margin: 3px;
+            padding: 10px;
+            /* position: fixed; */
+            /* position: absolute; */
+             /* transform: translate(0); */
+            /* filter: invert(); */
+            perspective: 0em;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    </div>
+</body>
+</html>

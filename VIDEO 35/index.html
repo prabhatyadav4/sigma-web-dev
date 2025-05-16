@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors - KernalPrab</title>
+    <style>
+        *{
+            background-color: rgba(244, 214, 184, 0.812);
+        }
+        /* .box:first-child{
+            color: red;
+        } */
+        /* .box:first-letter{
+            font-size: 100px;
+        } */
+        /* .box:first-line{
+            background-color: peru;
+        } */
+        /* .boxes *{
+            color:peru
+        } */
+        /* [data-color="primary"]{
+            color:red
+        } */
+        /* .box:nth-child(even){
+            background-color: peru;
+        } */
+        /* .box:nth-last-child(1){
+            background-color: peru;
+        } */
+        .boxes::before{
+            content:"Hello,";
+            color: blue;
+        }
+        .boxes::after{
+            content: "This is copyright of KernalPrab";
+            color:red;
+        }
+        ::selection{
+            color:grey;
+            background-color: white;
+        }
+        input::placeholder{
+            background-color:white;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am a box.</div>
+        <div class="box">I am big.</div>
+        <div class="box">I am good.</div>
+        <input type="text" placeholder="Enter your name">
+    </div>
+</body>
+</html>
