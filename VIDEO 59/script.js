@@ -15,15 +15,14 @@ This faulty calculator does the following:
 
 */
 
-
-let random = Math.random() // Generate a random number between 0 and 1
+let random = Math.random() // random number 0-1
 console.log(random)
 
-let a = prompt("Enter first number  : ") // Get first number from user
-let b = prompt("Enter operation     : ") // Get operation from user (+, -, *, /)
-let c = prompt("Enter second number : ") // Get second number from user
+let a = prompt("Enter first number  : ") // input 1st number
+let b = prompt("Enter operation     : ") // input operation
+let c = prompt("Enter second number : ") // input 2nd number
 
-// Mapping of correct operations to faulty operations
+// correct to faulty operation map
 let obj = {
     "+" : "-",
     "*" : "+",
@@ -32,13 +31,12 @@ let obj = {
 }
 
 if(random > 0.1){
-    // 90% of the time, perform the correct operation
+    // 90%: correct operation
     console.log(`The result is ${a} ${b} ${c}`)
     alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
 }
 else{
-    // 10% of the time, perform the faulty operation
-    b = obj[b] // Replace operation with faulty one
+    // 10%: faulty operation
+    b = obj[b] // swap operator
     alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
 }
-
