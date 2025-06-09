@@ -1,0 +1,41 @@
+<script>
+
+    let first, second, third
+    let random = Math.random() // Generate a random number between 0 and 1
+
+    // First Name
+    if(random < 0.33){
+        first = "Crazy" // If random is less than 0.33
+    }
+    else if(random < 0.66 && random >= 0.33){
+        first = "Amazing" // If random is between 0.33 and 0.66
+    }
+    else{
+        first = "Fire" // If random is greater than or equal to 0.66
+    }
+    random = Math.random() // Generate a new random number
+
+    // Second Name
+    if(random < 0.33){
+        second = "Engine"
+    }
+    else if(random < 0.66 && random >= 0.33){
+        second = "Foods"
+    }
+    else{
+        second = "Garment"
+    }
+    random = Math.random() // Generate another random number
+
+    // Third Name
+    if(random < 0.33){
+        third = "Bros"
+    }
+    else if(random < 0.66 && random >= 0.33){
+        third = "Limited"
+    }
+    else{
+        third = "Hub"
+    }
+    console.log(`${first} ${second} ${third}`) // Output the generated name
+</script>

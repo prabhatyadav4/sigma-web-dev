@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10 - KernalPrab</title>
+</head>
+<body>
+    <script>
+        // Define first set of words (adjectives)
+        let obj1 = {
+            1: "Crazy",
+            2: "Amazing",
+            3: "Fire"
+        }
+        // Define second set of words (nouns)
+        let obj2 = {
+            1: "Engine",
+            2: "Foods",
+            3: "Garments"
+        }
+        // Define third set of words (suffixes)
+        let obj3 = {
+            1: "Bros",
+            2: "Limited",
+            3: "Hub"
+        }
+
+        // Generate a random number between 1 and 3 for each set
+        var ran1 = Math.floor(Math.random()*3)+1;
+        var ran2 = Math.floor(Math.random()*3)+1;
+        var ran3 = Math.floor(Math.random()*3)+1;
+
+        // Combine and print a random company name to the console
+        console.log(obj1[ran1] + " " + obj2[ran2] + " " + obj3[ran3]);
+    </script>
+</body>
+</html>
