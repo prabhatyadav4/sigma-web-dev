@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 11 - KernalPrab</title>
-</head>
-<body>
-    <!-- Write a program to calculate the factorial of a number using reduce and using for loops -->
-
-    <script>
-        let a = 6 // Number to calculate factorial for
+let a = 6 // Number to calculate factorial for
 
 // Function to calculate factorial using reduce
 function factorial(number){
@@ -32,7 +21,3 @@ function facFor(number){
     return fac
 }
 console.log(facFor(a)) // Output factorial using for loop
-
-    </script>
-</body>
-</html>
