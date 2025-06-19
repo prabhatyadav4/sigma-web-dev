@@ -1,0 +1,68 @@
+<!--  Q7: The Local Storage Manager:
+    You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that takes a note object and saves it to the browser's local storage.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+
+// Save a note object to local storage
+function saveNoteToLocalStorage(note){
+    let noteString = JSON.stringify(note); // Convert note object to string
+    localStorage.setItem("note",noteString); // Store string in local storage
+}
+    
+// Retrieve the note object from local storage
+function getNoteFromLocalStorage(){
+    let noteString = localStorage.getItem("note"); // Get note string from storage
+    return noteString ? JSON.parse(noteString) : null; // Parse string to object
+}
+
+// Prompt user to create a note and save it
+function createAndSaveNote(){
+    let title = prompt("Enter the title of the note: ") // Get title from user
+    let content = prompt("Enter the content of the note: ") // Get content from user
+    if(title && content){
+      let myNote = {
+        title : title,
+        content : content
+      };
+      saveNoteToLocalStorage(myNote); // Save note to local storage
+      console.log('Note saved to local storage.');
+      console.log('Saved Note: ', myNote);
+      displayNote(); // Display the saved note
+    }
+    else{
+      console.log('Note creation is cancelled - both Title and Content required!');
+    }
+}
+
+// Display the note from local storage in console
+function displayNote(){
+    let retrievedNote = getNoteFromLocalStorage();  
+    if(retrievedNote){
+      console.log('Current saved note:');
+      console.log('Title:', retrievedNote.title);
+      console.log('Content:', retrievedNote.content);
+    }
+    else{
+      console.log('Note not found in Local Storage!');
+    }
+}
+createAndSaveNote(); // Start the note creation process
+</script>
+</html>
