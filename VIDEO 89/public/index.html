@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing POST request - KernalPrab</title>
+</head>
+<body>
+    <script>
+        // Define an async function to test different HTTP requests
+        async function testPost(){
+            // Send a POST request to the root URL
+            let a = await fetch("/", {method: "POST"})
+            let b = await a.text()
+            console.log(b); // Log the response from POST
+
+            // Send a PUT request to /put
+            let c = await fetch("/put", {method: "PUT"})
+            let d = await c.text()
+            console.log(d); // Log the response from PUT
+
+            // Send a DELETE request to /delete
+            let e = await fetch("/delete", {method: "DELETE"})
+            let f = await e.text()
+            console.log(f); // Log the response from DELETE
+        }
+        // Call the function to execute the requests
+        testPost()
+    </script>
+</body>
+</html>
