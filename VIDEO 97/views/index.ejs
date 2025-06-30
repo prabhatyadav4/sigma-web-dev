@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exercise 16 - KernalPrab</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <style>
+            /* Carousel background styling */
+            .carousel-background {
+                position: relative;
+                height: 100vh;
+                overflow: hidden;
+            }
+            /* Make carousel and images full viewport height */
+            .carousel-inner,
+            .carousel-item,
+            .carousel-item img {
+                height: 100vh;
+            }
+            /* Overlay content positioning */
+            .overlay-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 2;
+            }
+            .overlay-content .container {
+                margin-top: 60px;
+                text-align: center;
+            }
+            /* Dark overlay for readability */
+            .carousel-inner::after {
+                content: "";
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.3);
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="carousel-background">
+            <!-- Bootstrap Carousel -->
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://wallpapercave.com/wp/wp7996624.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://wallpapercave.com/wp/wp7996624.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://wallpapercave.com/wp/wp7996624.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- Overlay content: Navbar and Button -->
+            <div class="overlay-content">
+                <!-- Bootstrap Navbar -->
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Centered Button -->
+                <div class="container">
+                    <button type="button" class="btn btn-success mt-5">Generate Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <script>
+            // Button click event to fetch data from /generate endpoint
+            document.querySelector(".container>button").addEventListener("click", async ()=> {
+                console.log('Yes');
+                let a = await fetch("/generate")
+                let r = await a.json()
+                console.log(r);
+            })
+        </script>
+    </body>
+</html>
