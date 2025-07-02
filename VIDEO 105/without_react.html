@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why React? - KernalPrab</title>
+</head>
+<body>
+    <!-- Counter display -->
+    <div id="counter">0</div>
+    <!-- Button to increment counter -->
+    <button id="btn">Click me</button>
+    <script>
+        // Add click event listener to the button
+        document.getElementById("btn").addEventListener("click", () => {
+            // Get current counter value and increment it
+            let num =  parseInt(document.getElementById("counter").innerHTML)
+            document.getElementById("counter").innerHTML = num + 1
+        })
+    </script>
+</body>
+</html>
