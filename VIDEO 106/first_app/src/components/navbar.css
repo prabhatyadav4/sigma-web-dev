@@ -1,0 +1,16 @@
+nav ul{
+    display: flex;
+    background-color: grey;
+}
+li{
+    background-color: grey;
+    list-style: none;
+}
+ul{
+    justify-content: space-evenly;
+}
+nav{
+    background-color: grey;
+    padding: 15px;
+
+}
