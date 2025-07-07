@@ -54,10 +54,8 @@ function App() {
       {todos.map((todo) => {
         return (
           <React.Fragment key={todo.title}>
-            <div className="border m-4 border-1">
               <div className="todo">{todo.title}</div>
               <div className="todo">{todo.desc}</div>
-            </div>
           </React.Fragment>
         );
       })}
