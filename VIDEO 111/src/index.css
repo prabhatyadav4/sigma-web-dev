@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.card{
+  margin: 2px;
+  border: 2px solid black;
+  max-width: 23vw;
+  background-color: rgb(252, 113, 136);
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: rgb(247, 191, 201);
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: palevioletred;
+  color: white;
+  border: 2px solid black;
+}
+li{
+  list-style: none;
+}
+
+
