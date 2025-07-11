@@ -1,0 +1,10 @@
+.about {
+    background-color: rgb(238, 211, 170);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.textArea{
+    border: 2px solid black;
+    background-color: white;
+}
+
+body{
+    --tw-bg-opacity: 1;
+    background-color: rgb(207 203 231 / var(--tw-bg-opacity));
+}

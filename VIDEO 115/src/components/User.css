@@ -1,0 +1,10 @@
+.user {
+    background-color: rgb(238, 170, 227);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
