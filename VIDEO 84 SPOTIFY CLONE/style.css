@@ -75,3 +75,57 @@ body{
 .header > *{
     padding: 20px;
 }
+
+.spotifyPlaylists{
+    padding: 16px;
+}
+
+.cardContainer{
+    display: flex;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+    margin: 30px;
+}
+
+.card img{
+    height: 200px;
+    width: 200px;
+    /* object-fit: contain; */
+    object-fit: cover;
+}
+
+.card > *{
+    padding-top: 5px;
+}
+
+.card{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all .2s;
+}
+
+.card:hover{
+    background-color: #3a3a3a;
+}
+
+.play{
+  width: 46px;
+  height: 46px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgYXJpYS1sYWJlbD0iUGxheSBidXR0b24iPjx0aXRsZT5QbGF5PC90aXRsZT48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iIzI4YTc0NSIgc3Ryb2tlPSIjMWU3ZTM0IiBzdHJva2Utd2lkdGg9IjQiLz48cG9seWdvbiBwb2ludHM9IjQwLDMwIDcwLDUwIDQwLDcwIiBmaWxsPSJ3aGl0ZSIgLz48L3N2Zz4=");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 15px;
+  bottom: 90px;
+  opacity: 0;
+  transform: translate(10px, 10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .play{
+    opacity: 1;
+    transform: translate(0, 0);
+}
