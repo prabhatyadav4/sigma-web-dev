@@ -65,6 +65,7 @@ body{
 
 .right{
     margin: 14px 0;
+    position: relative;
 }
 
 .header{
@@ -164,4 +165,27 @@ body{
 .loginbtn:hover{
     font-size: 17px;
     font-weight: 600;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    width: 95%;
+    padding: 10px;
+}
+
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.songList ul{
+    padding: 0 12px;
+}
+
+.songList ul li{
+    list-style-type: decimal;
+    
 }
