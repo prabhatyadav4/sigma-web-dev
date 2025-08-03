@@ -88,7 +88,7 @@ body{
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
 }
 
@@ -176,7 +176,7 @@ body{
     width: 70vw;
     padding: 10px;
     border-radius: 10px;
-    height: 40px;
+    min-height: 40px;
 }
 
 .songbuttons{
@@ -212,6 +212,17 @@ body{
     width: 350px;
 }
 
+.hamburger{
+    display: none;
+}
+
+.hamburgerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 .playnow{
     display: flex;
     justify-content: center;
@@ -225,22 +236,23 @@ body{
 }
 
 .seekbar{
-   height: 2px;
-   width: 97%;
-   background:  black;
+    height: 4px;
+    width: 97%;
+    background:  black;
     position: absolute;
     bottom: 0;
     border-radius: 10px;
     margin: 6px;
+    cursor: pointer;
 }
 
 .circle{
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 10px;
     background-color: black;
     position: relative;
-    bottom: 5px;
+    bottom: 4.1px;
     left: 0%;
     transition: left 0.5s;
 }
@@ -257,4 +269,40 @@ body{
 .abovebar{
     display: flex;
     justify-content: space-between;
+    margin: 20px 0;
+}
+
+@media (max-width: 1400px){
+    .left{
+        background-color: black;
+        position: absolute;
+        left: -110%;
+        transition: all .5s;
+        z-index: 1;
+        width: 400px;
+    }
+
+    .left .close{
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 85vw;
+    }
+
+    .seekbar{
+        width: 90%;
+    }
+
+    .hamburger{
+        display: block;
+    }
 }
