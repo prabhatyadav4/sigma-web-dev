@@ -371,4 +371,10 @@ body{
         gap: 25px;
         align-items: center;
     }
+    .abovebar{
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
 }
