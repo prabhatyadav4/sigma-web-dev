@@ -298,6 +298,7 @@ body{
     width: 125px;
 }
 
+
 .abovebar{
     display: flex;
     justify-content: space-between;
@@ -371,10 +372,11 @@ body{
         gap: 25px;
         align-items: center;
     }
-    .abovebar{
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
-    }
 
+}
+
+@media (max-width: 1200px){
+    .card{
+        width: 80vw;
+    }
 }
