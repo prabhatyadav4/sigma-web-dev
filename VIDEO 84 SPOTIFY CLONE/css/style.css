@@ -83,43 +83,62 @@ body{
 .spotifyPlaylists h1{
     padding: 16px;
 }
-
-.cardContainer{
+.cardContainer {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    flex-direction: row; 
+    flex-direction: row;
     margin: 30px;
     overflow-y: auto;
     max-height: 60vh;
     justify-content: flex-start;
 }
 
-.card img{
-    height: 200px;
+/* Card styles */
+.card {
     width: 200px;
-    /* object-fit: contain; */
-    object-fit: cover;
-}
-
-.card > *{
-    padding-top: 5px;
-}
-
-.card{
-    width: 200px;
-    padding: 10px;
     border-radius: 5px;
     background-color: #252525;
     position: relative;
-    transition: all .2s;
+    transition: all 0.2s;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.card:hover{
+.card:hover {
     background-color: #3a3a3a;
     cursor: pointer;
 }
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text area */
+.card-text {
+    padding: 10px;
+}
+
+.card-text h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.card-text p {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
 
 .play{
   width: 46px;
@@ -313,6 +332,16 @@ body{
 }
 
 @media (max-width: 1200px){
+
+    .card-image {
+        height: auto; /* Let height adjust */
+    }
+
+    .card-image img {
+        height: auto;
+        object-fit: contain; /* Show full image */
+    }
+
     .left{
         background-color: black;
         position: absolute;
@@ -396,6 +425,14 @@ body{
 @media (max-width: 500px){
     .card{
         width: 100%;
+    }
+
+    .card-image {
+        height: auto; /* Let height adjust */
+    }
+    .card-image img {
+        height: auto;
+        object-fit: contain; /* Show full image */
     }
 
     .header{

@@ -1,7 +1,11 @@
 console.log('Lets write JavaScript');
-let currentSong = new Audio()
-let songs
-let CurrFolder
+
+let currentSong = new Audio();
+let songs;
+let CurrFolder;
+const play = document.getElementById("play");
+const previous = document.getElementById("previous");
+const next = document.getElementById("next");
 
 function secondsToMinutesSeconds(seconds){
     if(isNaN(seconds) || seconds < 0){
@@ -87,7 +91,7 @@ async function displayAlbums() {
         // Only process album folders inside /songs
         if (href && href.startsWith("/songs/") && !href.includes(".htaccess") && href !== "/songs/") {
             let parts = href.split("/").filter(Boolean);
-            let folder = parts.pop(); // "ncs", "cs", etc.
+            let folder = parts.pop();
 
             try {
                 // Fetch album metadata
@@ -99,25 +103,22 @@ async function displayAlbums() {
                 card.classList.add("card");
                 card.dataset.folder = folder;
                 card.innerHTML = `
-                    <div class="play"></div>
-                    <img src="/songs/${folder}/cover.jpg" alt="" />
-                    <h2>${meta.title}</h2>
-                    <p>${meta.description}</p>
+                    <div class="card-image">
+                        <img src="/songs/${folder}/cover.jpg" alt="${meta.title}" />
+                        <div class="play"></div>
+                    </div>
+                    <div class="card-text">
+                        <h2>${meta.title}</h2>
+                        <p>${meta.description}</p>
+                    </div>
                 `;
 
-                // Click event → Load playlist
-                card.addEventListener("click", async () => {
-                    let songs = await getSongs(`songs/${folder}`);
-                    updatePlaylistUI(songs); // Refresh playlist section
-                });
-
-                // Click event → Load playlist and play first song
+                // Click to load playlist and play
                 card.addEventListener("click", async () => {
                     await getSongs(`songs/${folder}`);
-                    playMusic(songs[0]); // Play the first song
+                    playMusic(songs[0]);
                 });
-                
-                // Append card to the container
+
                 cardContainer.appendChild(card);
 
             } catch (err) {
@@ -126,6 +127,7 @@ async function displayAlbums() {
         }
     }
 }
+
 
 // Function to update playlist section in UI
 function updatePlaylistUI(songs) {
@@ -176,7 +178,7 @@ async function main(){
     currentSong.addEventListener("timeupdate", () => {
         document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`
 
-        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100% + "%"
+        document.querySelector(".circle").style.left = ((currentSong.currentTime / currentSong.duration) * 100) + "%";
     })
 
     // Add an event listener for seekbar
@@ -200,8 +202,8 @@ async function main(){
     previous.addEventListener("click", ()=> {
         console.log("Previous clicked")
         let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-        if((index - 1) > 0){
-            playMusic(songs[index-1])
+        if ((index - 1) >= 0) {
+            playMusic(songs[index - 1]);
         }
     })
     
@@ -238,6 +240,5 @@ async function main(){
             document.querySelector(".range").getElementsByTagName("input")[0].value = 10;
         }
     })
-
 }
 main()
