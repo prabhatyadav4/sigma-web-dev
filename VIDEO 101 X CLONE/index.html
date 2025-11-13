@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>X</title>
+    <title>Home/X</title>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="src/output.css" />
   </head>
   <body class="bg-black text-white">
     <div class="flex container mx-auto">
-      <div class="first w-full">
-        <div class="logo invert">
+      <div class="first w-[70%]">
+        <div class="logo invert my-4  ">
           <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -26,35 +26,42 @@
             </g>
           </svg>
         </div>
-        <div class="sidebar">
-          <ul class="flex flex-col text-xl space-y-3">
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Home</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Explore</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Notifications</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Messages</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Grok</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Lists</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Bookmarks</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Communities</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Premium</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>Profile</li>
-            <li class="justify-center items-center gap-3">
-                <span class="material-symbols-outlined"> home </span>More</li>
+        <div class="sidebar flex justify-end">
+          <ul class="flex flex-col text-xl space-y-3 px-11 font-bold">
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Home</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> search </span>Explore</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> notifications </span>Notifications</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Messages</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Grok</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Lists</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Bookmarks</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Communities</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Premium</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>Profile</li>
+            <li class="justify-start items-center gap-3 w-fit px-5 py-3 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full">
+                <span class="text-3xl material-symbols-outlined"> home </span>More</li>
           </ul>
         </div>
       </div>
       <div class="second border-[0.5px] border-white border-y-black w-full">b</div>
-      <div class="third w-full">c</div>
+      <div class="third w-full">
+        <div class="search m-3">
+          <input type="text" placeholder="Search" class="w-1/2 rounded-full bg-gray-800 text-white px-4 py-2">
+        </div>
+        <div class="whats m-4 w-1/2 bg-gray-800 rounded-2xl">
+          <h1 class="text-xl font-bold">Whats Happening!</h1>
+        </div>
+      </div>
     </div>
   </body>
 </html>
